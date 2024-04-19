@@ -1,0 +1,114 @@
+section.home {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://img.freepik.com/vecteurs-libre/fond-casquettes-diplomees-realistes_52683-80772.jpg?t=st=1713518439~exp=1713522039~hmac=457acde6ac379e1f662e9525515aea5368be1fa48a950547d7a797cd8ac5b601&w=1380') 50% 50% no-repeat;
+  background-size: cover;
+  svg {
+    margin: 0 auto;
+    stroke: #0b0b0b;
+    stroke-width: 0.15px;
+    stroke-dashoffset: 1000;
+    stroke-dasharray: 1000;
+    text-shadow: 8px 8px #f6efef;
+    animation: textAnimationStroke 10s ease-in-out forwards infinite;
+    text.welcome {
+      text-align: center;
+      font-family: 'Shadows Into Light', cursive;
+      font-size: 2.3em;
+      letter-spacing: 3px;
+    }
+  }
+}
+
+@keyframes textAnimationStroke {
+  0% {
+    stroke-dashoffset: 1000%;
+  }
+  75% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+.box {
+  width: 140px;
+  height: auto;
+  float: left;
+  transition: .5s linear;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  padding: 15px;
+  text-align: center;
+  margin: 0 5px;
+  background: transparent;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.box:before {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  border-bottom: 4px solid transparent;
+  border-left: 4px solid transparent;
+  box-sizing: border-box;
+  transform: translateX(100%);
+}
+
+.box:after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  border-top: 4px solid transparent;
+  border-right: 4px solid transparent;
+  box-sizing: border-box;
+  transform: translateX(-100%);
+}
+
+.box:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.box:hover:before {
+  border-color: #262626;
+  height: 100%;
+  transform: translateX(0);
+  transition: .3s transform linear, .3s height linear .3s;
+}
+
+.box:hover:after {
+  border-color: #262626;
+  height: 100%;
+  transform: translateX(0);
+  transition: .3s transform linear, .3s height linear .5s;
+}
+
+button {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background: transparent;
+}
+.section.home {
+  display: flex;
+  justify-content: center; /* Centrer horizontalement */
+  align-items: center; /* Centrer verticalement */
+  height: 100vh; /* Utiliser toute la hauteur de la fenêtre */
+}
+
+.button-container {
+  text-align: center; /* Pour centrer le bouton */
+}

@@ -1,0 +1,27 @@
+<div class="page-background">
+  <div class="center-container">
+    <div class="wrapper">
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <p class="form-login">Connexion</p>
+        <div class="input-box">
+          <input formControlName="ine" required placeholder="INE" type="text" />
+        </div>
+        <div class="input-box">
+          <input formControlName="password" [type]="loginForm.value.showPassword ? 'text' : 'password'" required placeholder="Mot de passe">
+        </div>
+        <div class="remember-forgot">
+          <label>
+
+            <input formControlName="showPassword" type="checkbox">Afficher mot de passe
+
+          </label>
+          <a href="#">Mot de passe oublié</a>
+        </div>
+        <button class="btn" type="submit">Valider</button>
+        <div class="register-link">
+          <p>Vous n'avez pas de compte? <a (click)="aller_a_register()">S'inscrire</a></p>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
